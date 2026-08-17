@@ -1,0 +1,13 @@
+{
+  "name": "garage-tracer",
+  "version": "1.0.0",
+  "description": "Es un sistema basado en ML / MCPs que permite detectar una buena zona para comprar garages",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garage Tracer | Buscador de propiedades</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">Búsqueda guiada por prompt</p>
+        <h1>Encuentra propiedades para comprar</h1>
+        <p class="intro">
+          Describe lo que buscas y filtra por localidad, provincia y rango de
+          precios para ver oportunidades destacadas.
+        </p>
+      </section>
+
+      <section class="search-panel" aria-labelledby="busqueda-title">
+        <div class="panel-heading">
+          <h2 id="busqueda-title">Define tu búsqueda</h2>
+          <p>Ajusta el prompt y los parámetros para refinar los resultados.</p>
+        </div>
+
+        <form id="search-form" class="search-form">
+          <label class="field field-full" for="prompt">
+            <span>Prompt de búsqueda</span>
+            <textarea
+              id="prompt"
+              name="prompt"
+              rows="3"
+              placeholder="Ej. Busco una casa familiar con patio en zona tranquila y cerca del centro"
+            ></textarea>
+          </label>
+
+          <label class="field" for="localidad">
+            <span>Localidad</span>
+            <select id="localidad" name="localidad">
+              <option value="">Todas</option>
+            </select>
+          </label>
+
+          <label class="field" for="provincia">
+            <span>Provincia</span>
+            <select id="provincia" name="provincia">
+              <option value="">Todas</option>
+            </select>
+          </label>
+
+          <label class="field" for="precio-min">
+            <span>Precio mínimo</span>
+            <input
+              id="precio-min"
+              name="precioMin"
+              type="number"
+              min="0"
+              step="1000"
+              placeholder="100000"
+            />
+          </label>
+
+          <label class="field" for="precio-max">
+            <span>Precio máximo</span>
+            <input
+              id="precio-max"
+              name="precioMax"
+              type="number"
+              min="0"
+              step="1000"
+              placeholder="400000"
+            />
+          </label>
+        </form>
+      </section>
+
+      <section class="results" aria-labelledby="resultados-title">
+        <div class="results-header">
+          <div>
+            <h2 id="resultados-title">Resultados disponibles</h2>
+            <p id="results-summary">Cargando propiedades...</p>
+          </div>
+        </div>
+
+        <div id="results-grid" class="results-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
