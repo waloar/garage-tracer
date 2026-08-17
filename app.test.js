@@ -24,7 +24,7 @@ test("getFilterOptions returns sorted unique localities and provinces", () => {
 
 test("filterProperties matches prompt terms ignoring accents", () => {
   const results = filterProperties(properties, {
-    prompt: "patio cordoba",
+    prompt: "reciclado cordoba",
   });
 
   assert.equal(results.length, 1);

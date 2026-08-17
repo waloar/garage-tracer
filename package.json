@@ -7,10 +7,6 @@
   "scripts": {
     "test": "node --test"
   },
-  "repository": {
-    "type": "git",
-    "url": "http://localhost:26831/waloar/garage-tracer"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC"

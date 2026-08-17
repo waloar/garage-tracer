@@ -99,6 +99,5 @@ form.addEventListener("submit", (event) => {
 });
 
 form.addEventListener("input", syncFilters);
-form.addEventListener("change", syncFilters);
 
 syncFilters();
